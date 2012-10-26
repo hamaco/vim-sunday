@@ -94,7 +94,7 @@ function! s:IncDec(inc_or_dec) "{{{
         let n = match(s:words, '\<' . w . ':\i\+\C')
         let n = match(s:words, ':', n)
         let a = matchstr(s:words, '\i\+', n)
-        execute "normal ciw" . a
+        execute "normal ebciw" . a
       else
         nunmap <c-a>
         execute "normal \<c-a>"
